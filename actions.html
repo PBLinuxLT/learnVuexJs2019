@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuex actions.js | Vuex (Quasar) State Modules Example</title>
+    <meta name="description" content="Vuex Modules Cheat Sheet">
+    
+    
+    <link rel="preload" href="/learnVuexJs2019/assets/css/0.styles.ae7e23cf.css" as="style"><link rel="preload" href="/learnVuexJs2019/assets/js/app.c13ea13e.js" as="script"><link rel="preload" href="/learnVuexJs2019/assets/js/4.b63d716e.js" as="script"><link rel="prefetch" href="/learnVuexJs2019/assets/js/10.d6bc30d3.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/11.28002d60.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/2.855c3a5f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/3.f65dda7e.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/5.2272cc37.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/6.1f75aa9f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/7.8c1f85e8.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/8.9f6f3901.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/9.8c9360c2.js">
+    <link rel="stylesheet" href="/learnVuexJs2019/assets/css/0.styles.ae7e23cf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learnVuexJs2019/" class="home-link router-link-active"><!----> <span class="site-name">Vuex (Quasar) State Modules Example</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learnVuexJs2019/" class="nav-link">Home</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learnVuexJs2019/" class="nav-link">Home</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/learnVuexJs2019/" class="sidebar-link">Getting Started</a></li><li><a href="/learnVuexJs2019/getters.html" class="sidebar-link">Vuex getters.js</a></li><li><a href="/learnVuexJs2019/actions.html" class="active sidebar-link">Vuex actions.js</a></li><li><a href="/learnVuexJs2019/mutations.html" class="sidebar-link">Vuex mutations.js</a></li><li><a href="/learnVuexJs2019/example_component.html" class="sidebar-link">Example Vuex Component</a></li><li><a href="/learnVuexJs2019/state.html" class="sidebar-link">Vuex state.js</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="vuex-actions-js"><a href="#vuex-actions-js" aria-hidden="true" class="header-anchor">#</a> Vuex actions.js</h1> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// function (context, payload) {}</span>
+<span class="token comment">// context : commit, getters, dispatch</span>
+<span class="token comment">// or state or use destructuring as below.</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">addTen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> commit<span class="token punctuation">,</span> dispatch <span class="token punctuation">}</span><span class="token punctuation">,</span> payload</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'add'</span><span class="token punctuation">,</span> payload<span class="token punctuation">)</span>
+  <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'cl'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">cl</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Action cl dispatched from addTen'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><em>Mutation add() which has state as a parameter and can receive a payload</em></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> payload</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>count <span class="token operator">+=</span> payload
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>View <a href="/learnVuexJs2019/mutations.html">Mutations</a> to see all Mutations used</strong></p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/learnVuexJs2019/getters.html" class="prev">
+          Vuex getters.js
+        </a></span> <span class="next"><a href="/learnVuexJs2019/mutations.html">
+          Vuex mutations.js
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/learnVuexJs2019/assets/js/app.c13ea13e.js" defer></script><script src="/learnVuexJs2019/assets/js/4.b63d716e.js" defer></script>
+  </body>
+</html>
