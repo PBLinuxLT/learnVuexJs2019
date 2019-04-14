@@ -7,7 +7,7 @@
     <meta name="description" content="Vuex Modules Cheat Sheet">
     
     
-    <link rel="preload" href="/learnVuexJs2019/assets/css/0.styles.ae7e23cf.css" as="style"><link rel="preload" href="/learnVuexJs2019/assets/js/app.c13ea13e.js" as="script"><link rel="preload" href="/learnVuexJs2019/assets/js/9.8c9360c2.js" as="script"><link rel="prefetch" href="/learnVuexJs2019/assets/js/10.d6bc30d3.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/11.28002d60.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/2.855c3a5f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/3.f65dda7e.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/4.b63d716e.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/5.2272cc37.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/6.1f75aa9f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/7.8c1f85e8.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/8.9f6f3901.js">
+    <link rel="preload" href="/learnVuexJs2019/assets/css/0.styles.ae7e23cf.css" as="style"><link rel="preload" href="/learnVuexJs2019/assets/js/app.33ea5908.js" as="script"><link rel="preload" href="/learnVuexJs2019/assets/js/9.65150638.js" as="script"><link rel="prefetch" href="/learnVuexJs2019/assets/js/10.d6bc30d3.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/11.28002d60.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/2.855c3a5f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/3.f65dda7e.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/4.b63d716e.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/5.2272cc37.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/6.1f75aa9f.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/7.8c1f85e8.js"><link rel="prefetch" href="/learnVuexJs2019/assets/js/8.9f6f3901.js">
     <link rel="stylesheet" href="/learnVuexJs2019/assets/css/0.styles.ae7e23cf.css">
   </head>
   <body>
@@ -25,6 +25,16 @@
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">lowercase</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   state<span class="token punctuation">.</span>name <span class="token operator">=</span> state<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
+</code></pre></div><p><strong>Using the Mutations Helper in a component</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapGetters<span class="token punctuation">,</span> mapMutations<span class="token punctuation">,</span> mapActions<span class="token punctuation">,</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token string">'example'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+    <span class="token string">'addOne'</span><span class="token punctuation">,</span>
+    <span class="token string">'minusOne'</span><span class="token punctuation">,</span>
+    <span class="token string">'uppercase'</span><span class="token punctuation">,</span>
+    <span class="token string">'lowercase'</span>
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 </code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/learnVuexJs2019/actions.html" class="prev">
@@ -34,6 +44,6 @@
         </a>
         →
       </span></p></div> </div> <!----></div></div>
-    <script src="/learnVuexJs2019/assets/js/app.c13ea13e.js" defer></script><script src="/learnVuexJs2019/assets/js/9.8c9360c2.js" defer></script>
+    <script src="/learnVuexJs2019/assets/js/app.33ea5908.js" defer></script><script src="/learnVuexJs2019/assets/js/9.65150638.js" defer></script>
   </body>
 </html>
